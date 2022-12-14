@@ -4,7 +4,7 @@ export default class Footer extends Component{
     render() {
         return(
             <footer className="p-4 bg-white sm:p-6 dark:bg-gray-900">
-                <div className="md:flex md:justify-between">
+                <div className="md:flex md:justify-around">
                     <div className="mb-6 md:mb-0 w-1/2">
                         <h2 className="dark:text-white text-left font-bold">Tentang Kami</h2>
                         <p className="dark:text-white text-left">
