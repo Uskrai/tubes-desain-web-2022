@@ -4,7 +4,7 @@ export default class Footer extends Component{
     render() {
         return(
             <footer className="p-4 bg-white sm:p-6 dark:bg-gray-900">
-                <div className="md:flex md:justify-around">
+                <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0 w-1/2">
                         <h2 className="dark:text-white text-left font-bold">Tentang Kami</h2>
                         <p className="dark:text-white text-left">
@@ -15,9 +15,9 @@ export default class Footer extends Component{
                         </p>
                     </div>
                     <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-                        <div>
+                        <div className="flex flex-col items-start">
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Selengkapnya</h2>
-                            <ul className="text-gray-600 dark:text-gray-400">
+                            <ul className="text-gray-600 dark:text-gray-400 flex flex-col items-start">
                                 <li className="mb-4">
                                     <a href="#" className="hover:underline">Kirim Saran</a>
                                 </li>
