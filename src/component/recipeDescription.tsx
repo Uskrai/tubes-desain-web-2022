@@ -8,7 +8,7 @@ export default class RecipeDescription extends Component {
           {/* <!-- Carousel wrapper --> */}
           <div className="relative overflow-hidden rounded-lg">
             {/* <!-- Item 1 --> */}
-            <div className="hidden duration-700 ease-in-out" data-carousel-item>
+            <div className="hidden duration-700 ease-in-out" data-carousel-item="active">
                 <img
                     src="https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg"
                     className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
@@ -24,7 +24,7 @@ export default class RecipeDescription extends Component {
                 />
             </div>
             {/* <!-- Item 3 --> */}
-            <div className="hidden duration-700 ease-in-out" data-carousel-item>
+            <div className="hidden duration-700 ease-in-out" data-carousel-item="active">
                 <img
                     src="https://mdbootstrap.com/img/Photos/Slides/img%20(23).jpg"
                     className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
@@ -108,12 +108,12 @@ export default class RecipeDescription extends Component {
               <p className="text-white">Dibuat oleh</p>
               <a href="#" className="flex items-center gap-3">
                 <figure className="radius-100 max-w-[48px]">
-                    <img src="https://avatars.githubusercontent.com/u/73420137?v=4" alt="" className="object-cover" />
+                    <img src="https://avatars.githubusercontent.com/u/72368050?v=4" alt="" className="object-cover rounded-full" />
                 </figure>
                 <h2 className="font-medium text-xl text-white">Alfredo Press</h2>
               </a>
             </div>
-            <div className="border-2 border-gray-800 bg-white p-4 rounded-xl bg-gray-300">
+            <div className="border-2 border-gray-800 p-4 rounded-xl bg-gray-300">
               <p>
                 Setelah tengok #ApaIsiKulkas saya #PilihMasak Beef Teriyaki ini
                 karena si kakak paling doyan menu dengan beef slice dan pastinya
@@ -122,6 +122,7 @@ export default class RecipeDescription extends Component {
                 juara, deh!
               </p>
             </div>
+
           </div>
         </div>
       </div>
