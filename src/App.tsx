@@ -7,6 +7,7 @@ import Footer from './component/footer';
 import RecipeSearchBox from './component/recipeSearchBox';
 import RecipeDescription from './component/recipeDescription';
 import IngredientsSection from './component/ingredientsSection';
+import CookingSteps from './component/cookingSteps';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <RecipeSearchBox/>
       <RecipeDescription/>
       <IngredientsSection/>
+      <CookingSteps/>
       <Footer/>
     </div>
   );
