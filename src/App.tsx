@@ -8,7 +8,11 @@ import RecipeSearchBox from './component/recipeSearchBox';
 import RecipeDescription from './component/recipeDescription';
 import IngredientsSection from './component/ingredientsSection';
 import CookingSteps from './component/cookingSteps';
+<<<<<<< Updated upstream
 import Profile from './component/profile';
+=======
+import DifficultyFilter from './component/difficultyFilter';
+>>>>>>> Stashed changes
 
 function App() {
   return (
@@ -20,7 +24,11 @@ function App() {
       <RecipeDescription/>
       <IngredientsSection/>
       <CookingSteps/>
+<<<<<<< Updated upstream
       <Profile/>
+=======
+      <DifficultyFilter/>
+>>>>>>> Stashed changes
       <Footer/>
     </div>
   );
