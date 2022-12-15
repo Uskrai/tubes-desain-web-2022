@@ -4,7 +4,7 @@ export default class RecipeDescription extends Component {
   render() {
     return (
       <div className="flex flex-row-reverse bg-gray-700 m-3 rounded-lg">
-        <div id="controls-carousel" className="relative relative" data-carousel="static">
+        <div id="controls-carousel" className="relative" data-carousel="static">
           {/* <!-- Carousel wrapper --> */}
           <div className="relative overflow-hidden rounded-lg">
             {/* <!-- Item 1 --> */}
