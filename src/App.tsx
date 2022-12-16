@@ -1,35 +1,58 @@
-import React from 'react';
-// import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
-import FoodCards from './component/foodCards';
 import Navbar from './component/navbar';
 import Footer from './component/footer';
 import RecipeSearchBox from './component/recipeSearchBox';
+import RecipeBox from './component/recipeBox';
 import RecipeDescription from './component/recipeDescription';
 import IngredientsSection from './component/ingredientsSection';
 import CookingSteps from './component/cookingSteps';
-<<<<<<< Updated upstream
 import Profile from './component/profile';
-=======
 import DifficultyFilter from './component/difficultyFilter';
->>>>>>> Stashed changes
 
 function App() {
+  useEffect(() => {
+    document.title = 'CookiPad';
+  }, []);
+
+  const [resultCat, setResCat] = useState([]);
+
+  useEffect(() => {
+    const api = async () => {
+      const data = await fetch("https://masak-apa-tomorisakura.vercel.app/api/category/recipes", {
+        method: "GET"
+      });
+      const jsonData = await data.json();
+      setResCat(jsonData.results);
+    };
+
+    api();
+  }, []);
+
+  const [resultRec, setResRec] = useState([]);
+
+  useEffect(() => {
+    const api = async () => {
+      const data = await fetch("https://masak-apa-tomorisakura.vercel.app/api/recipes-length/?limit=6", {
+        method: "GET"
+      });
+      const jsonData = await data.json();
+      setResRec(jsonData.results);
+    };
+
+    api();
+  }, []);
   return (
     <div className="App bg-gray-600">
-      <Navbar/>
-      <p>test</p>
-      <FoodCards image='./assets/images/strawberryshortcake.png'/>
-      <RecipeSearchBox/>
-      <RecipeDescription/>
+      <Navbar />
+      <RecipeSearchBox data={resultCat} />
+      <RecipeBox data={resultRec} />
+      {/* <RecipeDescription/>
       <IngredientsSection/>
       <CookingSteps/>
-<<<<<<< Updated upstream
       <Profile/>
-=======
-      <DifficultyFilter/>
->>>>>>> Stashed changes
-      <Footer/>
+      <DifficultyFilter/> */}
+      <Footer />
     </div>
   );
 }

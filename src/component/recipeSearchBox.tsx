@@ -1,22 +1,21 @@
 import React, {Component} from "react";
 
-export default class RecipeSearchBox extends Component{
+interface Props {
+    data : any;
+}
+
+export default class RecipeSearchBox extends Component<Props> {
     render() {
         return (
-            <div className="flex flex-col items-start bg-gray-700 rounded-lg w-1/2 p-6">
-                <h3 className="text-2xl text-white">Lihat isi kulkasmu!</h3>
-                <p className="text-base text-white">Buat hidangan lezat dari bahan yang kamu punyeaa</p>
+            <div className="flex flex-col items-start bg-gray-700 rounded-lg p-6 m-3">
+                <h3 className="text-2xl text-white font-bold">Temukan ide masakan!</h3>
+                <p className="text-base text-white">Ini adalah ide - ide untuk masakanmu</p>
                 <div className="flex flex-row flex-wrap p-2">
-                    <a href="#" className="bg-gray-300 rounded-full px-2 m-1">Bawang Bombay</a>
-                    <a href="#" className="bg-gray-300 rounded-full px-2 m-1">Sawi Hijau</a>
-                    <a href="#" className="bg-gray-300 rounded-full px-2 m-1">Mangga</a>
-                    <a href="#" className="bg-gray-300 rounded-full px-2 m-1">Nangka</a>
-                    <a href="#" className="bg-gray-300 rounded-full px-2 m-1">Kecap</a>
-                    <a href="#" className="bg-gray-300 rounded-full px-2 m-1">Saus Tiram</a>
-                    <a href="#" className="bg-gray-300 rounded-full px-2 m-1">Telur Asin</a>
-                    <a href="#" className="bg-gray-300 rounded-full px-2 m-1">Kacang Panjanggg</a>
-                    <a href="#" className="bg-gray-300 rounded-full px-2 m-1">Tepung Terigu</a>
-                    <a href="#" className="bg-gray-300 rounded-full px-2 m-1">Gomu-gomu No Mi</a>
+                    {
+                        this.props.data.map((data:any) => {
+                            return <a href={data.key} className="bg-gray-300 rounded-xl px-2 py-1.5 m-1 transition ease-in-out duration-300 hover:scale-105">{data.category}</a>
+                        })
+                    }
                 </div>
             </div>
         )
