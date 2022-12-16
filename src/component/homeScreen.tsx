@@ -1,13 +1,50 @@
-import React, { Component } from "react";
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Route, Routes, Link } from "react-router-dom"
+import Navbar from './navbar';
+import Footer from './footer';
+import RecipeSearchBox from './recipeSearchBox';
+import RecipeBox from './recipeBox';
 
-class HomeScreen extends Component {
-  render() {
+export default function HomeScreen() {
+    useEffect(() => {
+        document.title = 'CookiPad';
+    }, []);
+
+    const [resultCat, setResCat] = useState([]);
+
+    useEffect(() => {
+        const api = async () => {
+            const data = await fetch("https://masak-apa-tomorisakura.vercel.app/api/category/recipes", {
+                method: "GET"
+            });
+            const jsonData = await data.json();
+            setResCat(jsonData.results);
+        };
+
+        api();
+    }, []);
+
+    const [resultRec, setResRec] = useState([]);
+
+    useEffect(() => {
+        const api = async () => {
+            const data = await fetch("https://masak-apa-tomorisakura.vercel.app/api/recipes-length/?limit=6", {
+                method: "GET"
+            });
+            const jsonData = await data.json();
+            setResRec(jsonData.results);
+        };
+
+        api();
+    }, []);
+
     return (
-      <div>
-        <h1>Home Screen</h1>
-        <Link to="/about">Go to About Screen</Link>
-      </div>
+        <div className="App bg-gray-600">
+            <Navbar />
+            <RecipeSearchBox data={resultCat} />
+            {/* <button><Link to="/recipe">TEST</Link></button> */}
+            <RecipeBox data={resultRec} />
+            <Footer />
+        </div>
     );
-  }
 }
