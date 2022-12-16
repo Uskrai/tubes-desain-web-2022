@@ -27,11 +27,12 @@ export default function RecipeScreen() {
             <Navbar />
             {
                 resultRec.map((data) => {
+                    document.title = data.title;
                     return (
                         <div>
                             <RecipeDescription title={data.title} description={data.desc} author={data.author.user} gambar={data.thumb} />
                             <IngredientsSection ingredients={data.ingredient} />
-                            <CookingSteps step={data.step}/>
+                            <CookingSteps step={data.step} />
                         </div>
                     )
                 })

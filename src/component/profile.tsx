@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
-export default class Profile extends Component{
+export default class Profile extends Component {
     render() {
-        return(
+        return (
             <div className="flex flex-col justify-items-start items-start bg-gray-700 rounded-lg m-3">
                 <div className="flex flex-col px-8 py-8 gap-2">
                     <div className="flex">
@@ -13,7 +13,7 @@ export default class Profile extends Component{
                             <div className="item h-10 px-3 py-5">
                                 <h2 className="font-medium text-3xl text-white">Alfredo Press</h2>
                             </div>
-	                        <div className="item h-10 px-3 py-5">
+                            <div className="item h-10 px-3 py-5">
                                 <h3 className="text-xl text-white">@alfredop</h3>
                             </div>
                         </div>

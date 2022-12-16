@@ -1,16 +1,16 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 
-export default class Footer extends Component{
+export default class Footer extends Component {
     render() {
-        return(
+        return (
             <footer className="p-4 bg-white sm:p-6 dark:bg-gray-900">
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0 w-1/2">
                         <h2 className="dark:text-white text-left font-bold">Tentang Kami</h2>
                         <p className="dark:text-white text-left">
-                            Misi kami di Cookipad adalah untuk membuat masak sehari-hari makin menyenangkan, 
-                            karena kami percaya bahwa memasak adalah kunci menuju kehidupan yang lebih bahagia 
-                            dan lebih sehat bagi manusia, komunitas, dan planet ini. Kami mendukung komunitas Cookipad 
+                            Misi kami di Cookipad adalah untuk membuat masak sehari-hari makin menyenangkan,
+                            karena kami percaya bahwa memasak adalah kunci menuju kehidupan yang lebih bahagia
+                            dan lebih sehat bagi manusia, komunitas, dan planet ini. Kami mendukung komunitas Cookipad
                             di seluruh dunia untuk membantu satu sama lain dengan berbagi resep dan tips memasak.
                         </p>
                     </div>
