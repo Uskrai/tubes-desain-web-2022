@@ -13,7 +13,7 @@ export default class RecipeSearchBox extends Component<Props> {
                 <div className="flex flex-row flex-wrap p-2">
                     {
                         this.props.data.map((data: any) => {
-                            return <a href={data.key} className="bg-gray-300 rounded-xl px-2 py-1.5 m-1 transition ease-in-out duration-300 hover:scale-105">{data.category}</a>
+                            return <a href={"/category/" + data.key} className="bg-gray-300 rounded-xl px-2 py-1.5 m-1 transition ease-in-out duration-300 hover:scale-105">{data.category}</a>
                         })
                     }
                 </div>

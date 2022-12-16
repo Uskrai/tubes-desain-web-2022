@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Route, Routes, Link } from "react-router-dom"
 import Navbar from './navbar';
 import Footer from './footer';
 import RecipeSearchBox from './recipeSearchBox';
@@ -42,7 +41,6 @@ export default function HomeScreen() {
         <div className="App bg-gray-600">
             <Navbar />
             <RecipeSearchBox data={resultCat} />
-            {/* <button><Link to="/recipe">TEST</Link></button> */}
             <RecipeBox data={resultRec} />
             <Footer />
         </div>
