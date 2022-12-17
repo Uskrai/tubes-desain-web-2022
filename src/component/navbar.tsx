@@ -9,7 +9,6 @@ export default class Navbar extends Component<any, any> {
     }
     render() {
         const data:any = localStorage.getItem('user');
-        console.log(data);
 
         return (
             <header>
